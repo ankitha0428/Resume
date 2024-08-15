@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal portfolio website - Easy Tutorials</title>
+    <link rel="stylesheet" href="folios.css">
+    <script src="https://kit.fontawesome.com/8a8f4d8aaa.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png.jpg" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#project">project</a></li>
+                <li><a href="#contact">contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <h1>Hi, I'm Bhasyam Ankitha From India</h1>
+        </div>
+    </div>
+</div> 
+--------------ABOUT--------------- 
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/kanki.jpeg">
+            </div>
+            <div class="about-col-2">
+                <h2 class="sub-title">About me:</h2>
+                
+                <p>My name is Bhasyam Ankitha pursuing B.tech in RGMCET college</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('technical skills')">technical skills</p>
+                    <p class="tab-links" onclick="opentab('certification')">Certification</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                 <div class="tab-contents active-tab" id="technical skills">
+                    <ul>
+                        <li>C Programming</li>
+                        <li>Python</li>
+                        <li>Java</li>
+                    </ul>
+            </div>
+            <div class="tab-contents" id="certification">
+                <ul>
+                    <li>I have successfully completed google Andriod developer intership.</li>
+                    <li>participated in Hackthon.</li>
+                    <li>Online certification in soft skills and internet of things in NPTEL.</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>2025</span><br>pursuing B.Tech in RGMCET with 75% </li>
+                    <li><span>2021</span><br>Rao's junior college with 85%</li>
+                    <li><span>2019</span><br>Little Angels EM High School with 97%</li>
+                </ul>
+        </div>
+        </div>
+    </div>
+    </div>
+</div>
+-------------PROJECT------------
+<div id="project">
+    <div class="container">
+        <h2 class="sub-title">My project:</h2>
+        <div class="services-list">
+            <div>
+                <h3>piano</h3>
+                <p>"I designed and built a digital piano using an Arduino board, which enables users to play musical notes through an interactive interface.
+                 My Arduino-powered piano project allows users to create music by pressing keys that trigger sound outputs. I created a fully functional piano simulator, allowing users to play and explore musical compositions in a digital environment."
+                 Through this project, I effectively combined music and technology to create an immersive piano-playing experience
+                 My piano project highlights my proficiency in [specific skills or technologies used, e.g., audio processing, JavaScript, etc.]."
+                 I designed an intuitive and user-friendly piano interface, making it easy for users to play and enjoy music."
+                 
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+-----------------------CONTACT----------------------
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h2 class="sub-title">contact details:</h2>
+                <p><i class="fa-solid fa-paper-plane"></i>bhasyamankitha@gmail.com</p>
+                <p><i class="fa-solid fa-phone-volume"></i>7670965559</p>
+                <a href="resume1.html"><button>Download cv</button></a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="your name" required>
+                    <input type="email" name="email" placeholder="your email" required>
+                    <textarea name="Message" rows="6" placeholder="your message"></textarea>
+                    <button type="submit" class="btn btn2">submit</button>
+                </form>
+                <span id="msg">Hello</span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>copyright @2024 Portfolio</p>
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+     var tabcontents = document.getElementsByClassName("tab-contents");
+     function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+     }
+</script>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+</body>
+</html>
